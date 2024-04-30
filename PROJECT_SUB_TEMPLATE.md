@@ -35,14 +35,24 @@ I, ***Jalen Hughes***, hereby certify that is my original work completed without
 
 ### Main
 
-| Input    | Process  | Output   |
+| Requirement    | Implementation  | Explanation   |
 | -------- | -------- | -------- |
-| Car Type (1 or 2)|Collecting Car Information| End of Program  Details saved to  car_cart.txt.   |
-Car Make (1 or 2)|Checking Car Make and Model
- Car Model|Mileage Check
- Car Mileage|File Output 
- -|Repeating the Process|
- -|Error Handling|
+| Display a welcome message and menu	|displayMenu() function	| The displayMenu() function prints the welcome message and prompts the user to choose whether they want to get a car.|
+Get string input from the user	|getInput() function	|The getInput() function gets a string input from the user and returns it.
+ Get integer input from the user	|getIntInput() function |The getIntInput() function gets an integer input from the user and returns it.
+ Add a vehicle to the inventory	|addVehicle() function	|The addVehicle() function adds a vehicle to the inventory by getting input for the type, make, model, and mileage of the vehicle.
+Store data for multiple vehicles	 |Vectors: vector<string> types, vector<string> makes, vector<string> models, vector<int> mileages	|Data for multiple vehicles is stored using vectors, with each vector corresponding to a different attribute of the vehicles.
+Display details of added vehicles|Looping through vectors in main()	|The main() function loops through the vectors to display details of added vehicles, such as type, make, model, and mileage.
+Save details to a file|	File output stream (ofstream outFile) and outFile usage in main()|	The code saves details of added vehicles to a file named "car_cart.txt".
+Proper handling of user input|	Functions like getInput(), getIntInput(), and input validation within functions|	User input is handled using functions that ensure proper handling and validation of input data.
+Use of function prototypes|	Function prototypes declared before main function|	Function prototypes are used to declare functions before their actual definitions for proper compilation.
+Use of pass-by-reference in a function|	addVehicle() function with vector parameters passed by reference|	Vector parameters in addVehicle() are passed by reference to modify the vectors in the main function.
+Use of a value-returning function|	getInput(), getIntInput() functions|	These functions return values (string or integer) based on user input.
+Proper commenting and code readability|	Inline comments, function names, variable names, and structured code|	Comments and meaningful names improve code readability and understanding.
+Proper error handling (file opening error)|	Check for file opening success (ofstream outFile)|	Code checks if the output file opens successfully and handles the error if it doesn't.
+User-friendly interface|	Prompts, messages, and clear menu structure|	The interface provides clear prompts and messages to guide the user through the program.
+Data validation (e.g., mileage < 100000)|	Conditional check in addVehicle() function and message display in main loop|	The code checks if the mileage is less than 100,000 before adding a vehicle and displays a message accordingly.
+Flexible data storage (dynamic resizing)|	Use of vectors for data storage|	Vectors provide dynamic resizing, making it easy to store and manage data for multiple vehicles.
 ## Pseudocode
 ```
 BEGIN
